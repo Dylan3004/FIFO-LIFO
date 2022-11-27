@@ -4,27 +4,21 @@ public class Main {
         int [] a = new int[10];
         Stos stos = new Stos(a);
         int b =0;
+        System.out.println("Stos tablicowy");
         for(int i =0;i<10;i++)
         {
             stos.push(b);
             stos.print();
             b++;
         }
-        //stos.pop(3);
-        //stos.pop(0);
        for(int i =0;i<10;i++)
         {
             stos.pop();
             stos.print();
         }
-        //stos.pop(1);
         stos.print();
-
-       StosWsk stosWsk = new StosWsk();
-       //stosWsk.push(1);
-       //stosWsk.push(2);
-       //stosWsk.pop();
-       //stosWsk.print();
+        System.out.println("Stos wskaźnikowy");
+        StosWsk stosWsk = new StosWsk();
         for(int i =0;i<20;i++)
         {
             stosWsk.push(i);
@@ -37,20 +31,24 @@ public class Main {
         }
         int [] m = new int[10];
         Fifo fifo = new Fifo(m);
+        System.out.println("Fifo tablicowe z modulo");
         for(int i=0;i<10;i++)
         {
             fifo.enqueue(i);
             fifo.print();
         }
-        fifo.print();
-        for(int i=0;i<10;i++)
+        for(int i=0;i<5;i++)
         {
             fifo.dequeue();
             fifo.print();
         }
-        fifo.print();
-
-
+        for(int i=0;i<5;i++)
+        {
+            fifo.enqueue(i);
+            fifo.print();
+        }
+        System.out.println();
+        System.out.println("Fifo wskaźnikowe");
         FifoWsk fifo1 = new FifoWsk();
         for(int i =0;i<10;i++)
         {
